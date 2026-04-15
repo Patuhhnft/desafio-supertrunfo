@@ -31,7 +31,7 @@ gcc supertrunfo.c -o supertrunfo
 ## Funcionalidades
 
 - Cadastro de cartas com atributos de países (população, área, PIB, pontos turísticos e densidade demográfica)
-- Comparação de cartas entre jogadores
+- Comparação de duas cartas cadastradas
 - Exibição das cartas cadastradas
 
 ## Tecnologias

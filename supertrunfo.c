@@ -37,9 +37,13 @@ void ler_carta(Carta *carta, int numero) {
 
     printf("Estado (ex: A1): ");
     scanf("%2s", carta->estado);
+    /* Discard any remaining characters on the line */
+    while (getchar() != '\n');
 
     printf("Código da carta (ex: A01): ");
     scanf("%4s", carta->codigo);
+    /* Discard any remaining characters on the line */
+    while (getchar() != '\n');
 
     printf("Nome do país: ");
     scanf(" %49[^\n]", carta->nome);
