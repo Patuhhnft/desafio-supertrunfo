@@ -10,6 +10,8 @@ int main()
     int numerohabitantes;
     float area;
     float pib;
+    float densidade;
+    float pibcap;
     int pontosTuristicos;
     char temp[20];
 
@@ -57,8 +59,11 @@ int main()
     while (getchar() != '\n');
     printf("\n");
 
+    densidade = (float) numerohabitantes / area;
+    pibcap = (float) pib / numerohabitantes;
+
     // Exibe a carta inteira
-    printf("Sua primeira carta é: \n");
+    printf("Sua segunda carta é: \n");
     printf("Estado: %c\n", LetraEstado);
     printf("Código: %s\n", temp);
     printf("Nome da cidade: %s\n", cidade);
@@ -66,12 +71,15 @@ int main()
     printf("Área: %.2f\n", area);
     printf("PIB: %.2f\n", pib);
     printf("Número de pontos turísticos: %d\n", pontosTuristicos);
+    printf("Densidade populacional: %.2f hab/km²\n", densidade);
+    printf("Pib per capita: %.2f", pibcap);
 
     // Segunda carta
 
     // A letra que representa o estado
     printf("\nEscolha uma carta de A a H para representar seu estado: ");
     scanf("%c", &LetraEstado);
+    while (getchar() != '\n');
     
     // O código do estado
     printf("Digite o código do seu estado de 1 a 8: ");
@@ -110,6 +118,10 @@ int main()
     while (getchar() != '\n');
     printf("\n");
 
+    densidade = (float) numerohabitantes / area;
+    pibcap = (float) pib / numerohabitantes;
+
+    // Exibe a carta inteira
     printf("Sua segunda carta é: \n");
     printf("Estado: %c\n", LetraEstado);
     printf("Código: %s\n", temp);
@@ -117,7 +129,9 @@ int main()
     printf("Número de habitantes: %d\n", numerohabitantes);
     printf("Área: %.2f\n", area);
     printf("PIB: %.2f\n", pib);
-    printf("Número de pontos turísticos: %d", pontosTuristicos);
+    printf("Número de pontos turísticos: %d\n", pontosTuristicos);
+    printf("Densidade populacional: %.2f hab/km²\n", densidade);
+    printf("Pib per capita: %.2f", pibcap);
 
     return 0;
 }
