@@ -4,134 +4,112 @@
 
 int main()
 {
-    char LetraEstado;
-    char codigo[20];
-    char cidade[50];
-    int numerohabitantes;
-    float area;
-    float pib;
-    float densidade;
-    float pibcap;
-    int pontosTuristicos;
-    char temp[20];
+    char LetraEstadoP, LetraEstadoS;
+    char codigoP[20], codigoS[20];
+    char cidadeP[50], cidadeS[50];
+    int numerohabitantesP, numerohabitantesS;
+    float areaP, areaS;
+    float pibP, pibS;
+    float densidadeP, densidadeS;
+    float pibcapP, pibcapS;
+    int pontosTuristicosP, pontosTuristicosS;
+    char tempP[20], tempS[20];
 
-    // Primera carta
+    // Primeira carta
 
-    // A letra que representa o estado
-    printf("Escolha uma carta de A a H para representar seu estado: ");
-    scanf("%c", &LetraEstado);
+    printf("Escolha uma carta de A a H para representar seu estado (Primeira carta): ");
+    scanf("%c", &LetraEstadoP);
     while (getchar() != '\n');
-    
-    // O código do estado
+
     printf("Digite o código do seu estado de 1 a 8: ");
-    scanf("%s", codigo);
+    scanf("%s", codigoP);
     while (getchar() != '\n');
 
-    // O lugar onde faz a junção do estado com o código dele
-    sprintf(temp, "%c%s", LetraEstado, codigo);
+    sprintf(tempP, "%c%s", LetraEstadoP, codigoP);
+    printf("Sua carta é: %s\n", tempP);
 
-    // Exibe o código inteiro da carta
-    printf("Sua carta é: %s\n", temp);
-
-    // Pega o nome da cidade
     printf("Nome da cidade: ");
-    scanf(" %[^\n]", cidade);
+    scanf(" %[^\n]", cidadeP);
     while (getchar() != '\n');
 
-    // Pega o número de habitantes
     printf("Número de habitantes: ");
-    scanf("%d", &numerohabitantes);
+    scanf("%d", &numerohabitantesP);
     while (getchar() != '\n');
 
-    // Pega a Área
     printf("Área: ");
-    scanf("%f", &area);
+    scanf("%f", &areaP);
     while (getchar() != '\n');
 
-    // Pega o PIB
     printf("PIB: ");
-    scanf("%f", &pib);
+    scanf("%f", &pibP);
     while (getchar() != '\n');
 
-    // Pega o número de pontos turísticos
     printf("Número de pontos turísticos: ");
-    scanf("%d", &pontosTuristicos);
+    scanf("%d", &pontosTuristicosP);
     while (getchar() != '\n');
     printf("\n");
 
-    densidade = (float) numerohabitantes / area;
-    pibcap = (float) pib / numerohabitantes;
+    densidadeP = (float) numerohabitantesP / areaP;
+    pibcapP = (float) pibP / numerohabitantesP;
 
-    // Exibe a carta inteira
-    printf("Sua segunda carta é: \n");
-    printf("Estado: %c\n", LetraEstado);
-    printf("Código: %s\n", temp);
-    printf("Nome da cidade: %s\n", cidade);
-    printf("Número de habitantes: %d\n", numerohabitantes);
-    printf("Área: %.2f\n", area);
-    printf("PIB: %.2f\n", pib);
-    printf("Número de pontos turísticos: %d\n", pontosTuristicos);
-    printf("Densidade populacional: %.2f hab/km²\n", densidade);
-    printf("Pib per capita: %.2f", pibcap);
+    printf("Sua primeira carta é:\n");
+    printf("Estado: %c\n", LetraEstadoP);
+    printf("Código: %s\n", tempP);
+    printf("Nome da cidade: %s\n", cidadeP);
+    printf("Número de habitantes: %d\n", numerohabitantesP);
+    printf("Área: %.2f\n", areaP);
+    printf("PIB: %.2f\n", pibP);
+    printf("Número de pontos turísticos: %d\n", pontosTuristicosP);
+    printf("Densidade populacional: %.2f hab/km²\n", densidadeP);
+    printf("PIB per capita: %.2f\n", pibcapP);
 
     // Segunda carta
 
-    // A letra que representa o estado
-    printf("\nEscolha uma carta de A a H para representar seu estado: ");
-    scanf("%c", &LetraEstado);
+    printf("\nEscolha uma carta de A a H para representar seu estado (Segunda carta): ");
+    scanf("%c", &LetraEstadoS);
     while (getchar() != '\n');
-    
-    // O código do estado
+
     printf("Digite o código do seu estado de 1 a 8: ");
-    scanf("%s", codigo);
+    scanf("%s", codigoS);
     while (getchar() != '\n');
 
-    // O lugar onde faz a junção do estado com o código dele
-    sprintf(temp, "%c%s", LetraEstado, codigo);
+    sprintf(tempS, "%c%s", LetraEstadoS, codigoS);
+    printf("Sua carta é: %s\n", tempS);
 
-    // Exibe o código inteiro da carta
-    printf("Sua carta é: %s\n", temp);
-
-    // Pega o nome da cidade
     printf("Nome da cidade: ");
-    scanf(" %[^\n]", cidade);
+    scanf(" %[^\n]", cidadeS);
     while (getchar() != '\n');
 
-    // Pega o número de habitantes
     printf("Número de habitantes: ");
-    scanf("%d", &numerohabitantes);
+    scanf("%d", &numerohabitantesS);
     while (getchar() != '\n');
 
-    // Pega a Área
     printf("Área: ");
-    scanf("%f", &area);
+    scanf("%f", &areaS);
     while (getchar() != '\n');
 
-    // Pega o PIB
     printf("PIB: ");
-    scanf("%f", &pib);
+    scanf("%f", &pibS);
     while (getchar() != '\n');
 
-    // Pega o número de pontos turísticos
     printf("Número de pontos turísticos: ");
-    scanf("%d", &pontosTuristicos);
+    scanf("%d", &pontosTuristicosS);
     while (getchar() != '\n');
     printf("\n");
 
-    densidade = (float) numerohabitantes / area;
-    pibcap = (float) pib / numerohabitantes;
+    densidadeS = (float) numerohabitantesS / areaS;
+    pibcapS = (float) pibS / numerohabitantesS;
 
-    // Exibe a carta inteira
-    printf("Sua segunda carta é: \n");
-    printf("Estado: %c\n", LetraEstado);
-    printf("Código: %s\n", temp);
-    printf("Nome da cidade: %s\n", cidade);
-    printf("Número de habitantes: %d\n", numerohabitantes);
-    printf("Área: %.2f\n", area);
-    printf("PIB: %.2f\n", pib);
-    printf("Número de pontos turísticos: %d\n", pontosTuristicos);
-    printf("Densidade populacional: %.2f hab/km²\n", densidade);
-    printf("Pib per capita: %.2f", pibcap);
+    printf("Sua segunda carta é:\n");
+    printf("Estado: %c\n", LetraEstadoS);
+    printf("Código: %s\n", tempS);
+    printf("Nome da cidade: %s\n", cidadeS);
+    printf("Número de habitantes: %d\n", numerohabitantesS);
+    printf("Área: %.2f\n", areaS);
+    printf("PIB: %.2f\n", pibS);
+    printf("Número de pontos turísticos: %d\n", pontosTuristicosS);
+    printf("Densidade populacional: %.2f hab/km²\n", densidadeS);
+    printf("PIB per capita: %.2f\n", pibcapS);
 
     return 0;
 }
