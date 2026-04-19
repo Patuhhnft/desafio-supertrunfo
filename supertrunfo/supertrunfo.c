@@ -14,6 +14,8 @@ int main()
     float pibcapP, pibcapS;
     int pontosTuristicosP, pontosTuristicosS;
     char tempP[20], tempS[20];
+    double superPoderP, superPoderS;
+    int compPopulacao, compArea, compPIB, compPontos, compDensidade, compPIBCapita, compSuperPoder;
 
     // Primeira carta
 
@@ -108,8 +110,29 @@ int main()
     printf("Área: %.2f\n", areaS);
     printf("PIB: %.2f\n", pibS);
     printf("Número de pontos turísticos: %d\n", pontosTuristicosS);
-    printf("Densidade populacional: %.2f hab/km²\n", densidadeS);
+    printf("Densidade populacional: %.2f hab/km2\n", densidadeS);
     printf("PIB per capita: %.2f\n", pibcapS);
+
+    superPoderP = (double) numerohabitantesP + areaP + pibP + pontosTuristicosP + pibcapP + (densidadeP > 0.0f ? (1.0 / densidadeP) : 0.0);
+    superPoderS = (double) numerohabitantesS + areaS + pibS + pontosTuristicosS + pibcapS + (densidadeS > 0.0f ? (1.0 / densidadeS) : 0.0);
+
+    compPopulacao   = numerohabitantesP > numerohabitantesS;
+    compArea        = areaP > areaS;
+    compPIB         = pibP > pibS;
+    compPontos      = pontosTuristicosP > pontosTuristicosS;
+    compDensidade   = densidadeP < densidadeS; /* menor densidade vence */
+    compPIBCapita   = pibcapP > pibcapS;
+    compSuperPoder  = superPoderP > superPoderS;
+
+    printf("\nComparação de Cartas:\n\n");
+
+    printf("População: %d (%s)\n", compPopulacao,  compPopulacao  ? "Carta 1 venceu" : "Carta 2 venceu");
+    printf("Área: %d (%s)\n", compArea,            compArea        ? "Carta 1 venceu" : "Carta 2 venceu");
+    printf("PIB: %d (%s)\n", compPIB,              compPIB         ? "Carta 1 venceu" : "Carta 2 venceu");
+    printf("Pontos Turísticos: %d (%s)\n", compPontos, compPontos  ? "Carta 1 venceu" : "Carta 2 venceu");
+    printf("Densidade Populacional: %d (%s)\n", compDensidade, compDensidade ? "Carta 1 venceu" : "Carta 2 venceu");
+    printf("PIB per Capita: %d (%s)\n", compPIBCapita, compPIBCapita ? "Carta 1 venceu" : "Carta 2 venceu");
+    printf("Super Poder: %d (%s)\n", compSuperPoder, compSuperPoder ? "Carta 1 venceu" : "Carta 2 venceu");
 
     return 0;
 }
