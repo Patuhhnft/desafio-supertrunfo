@@ -113,8 +113,8 @@ int main()
     printf("Densidade populacional: %.2f hab/km2\n", densidadeS);
     printf("PIB per capita: %.2f\n", pibcapS);
 
-    superPoderP = (double) numerohabitantesP + areaP + pibP + pontosTuristicosP + pibcapP + (densidadeP > 0.0f ? ((1.0 / densidadeP)*1000000) : 0.0);
-    superPoderS = (double) numerohabitantesS + areaS + pibS + pontosTuristicosS + pibcapS + (densidadeS > 0.0f ? ((1.0 / densidadeS)*1000000) : 0.0);
+    superPoderP = (double) numerohabitantesP + areaP + pibP + (pontosTuristicosP*2000) + pibcapP + (densidadeP > 0.0f ? ((1.0 / densidadeP)*1000000) : 0.0);
+    superPoderS = (double) numerohabitantesS + areaS + pibS + (pontosTuristicosS*2000) + pibcapS + (densidadeS > 0.0f ? ((1.0 / densidadeS)*1000000) : 0.0);
 
     compPopulacao   = numerohabitantesP > numerohabitantesS;
     compArea        = areaP > areaS;
