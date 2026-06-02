@@ -28,8 +28,8 @@ int main(){
     resultadoB = estoqueB > estoqueMinimoB;
 
     printf("\n\nO produto %s tem estoque mínimo %d\n", produtoA, resultadoA);
-    printf("O produto %s tem estoque mínimo %d", produtoB, resultadoB);
+    printf("O produto %s tem estoque mínimo %d\n", produtoB, resultadoB);
 
     // Comprarações entre os valores totais dos produtos
-    printf("O valor total de A (R$ %f) é maior que o valor total de B (R$%f): %d\n" , (estoqueA*valorA),(estoqueB*valorB), (valorA*estoqueA > valorB*estoqueB));
+    printf("O valor total de A (R$ %2.f) é maior que o valor total de B (R$%2.f): %d\n" , (estoqueA*valorA),(estoqueB*valorB), (valorA*estoqueA > valorB*estoqueB));
 }
